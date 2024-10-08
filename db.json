@@ -1,0 +1,44 @@
+{
+  "cities": [
+    {
+      "id": "1",
+      "name": "São Paulo",
+      "population": 12300000,
+      "state": "São Paulo",
+      "area": 1521.11,
+      "famous_landmark": "Avenida Paulista"
+    },
+    {
+      "id": "2",
+      "name": "Rio de Janeiro",
+      "population": 6748000,
+      "state": "Rio de Janeiro",
+      "area": 1182.30,
+      "famous_landmark": "Cristo Redentor"
+    },
+    {
+      "id": "3",
+      "name": "Belo Horizonte",
+      "population": 2512000,
+      "state": "Minas Gerais",
+      "area": 331.40,
+      "famous_landmark": "Praça da Liberdade"
+    },
+    {
+      "id": "4",
+      "name": "Curitiba",
+      "population": 1964000,
+      "state": "Paraná",
+      "area": 435.03,
+      "famous_landmark": "Jardim Botânico"
+    },
+    {
+      "id": "5",
+      "name": "Porto Alegre",
+      "population": 1493000,
+      "state": "Rio Grande do Sul",
+      "area": 496.68,
+      "famous_landmark": "Usina do Gasômetro"
+    }
+  ]
+}
