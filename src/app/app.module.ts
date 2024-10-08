@@ -10,6 +10,7 @@ import { FooterComponent } from './_components/footer/footer.component';
 import { ListCityComponent } from './_components/list-city/list-city.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './_pages/home/home.component';
+import { FormCityComponent } from './_components/form-city/form-city.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HomeComponent } from './_pages/home/home.component';
     FooterComponent,
     ListCityComponent,
     HomeComponent,
+    FormCityComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
