@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Lista de Cidades</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>População</th>
+        <th>Estado</th>
+        <th>Área</th>
+        <th>Ponto Turístico Famoso</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let city of cities">
+        <td>{{ city.id }}</td>
+        <td>{{ city.name }}</td>
+        <td>{{ city.population }}</td>
+        <td>{{ city.state }}</td>
+        <td>{{ city.area }} km²</td>
+        <td>{{ city.famous_landmark }}</td>
+        <td>
+          <button class="btn btn-primary me-2">Editar</button>
+          <button class="btn btn-danger">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
