@@ -10,14 +10,14 @@ import { CityService } from '../../city.service';
 export class ListCityComponent implements OnInit {
   public cities: City[] = [];
 
-  constructor(private citiesService: CityService) {}
+  constructor(private service: CityService) {}
 
   ngOnInit(): void {
     this.loadCities();
   }
 
   loadCities(): void {
-    this.citiesService.getCity().subscribe(
+    this.service.getCity().subscribe(
       (data: City[]) => {
         this.cities = data;
       },
@@ -25,5 +25,11 @@ export class ListCityComponent implements OnInit {
         console.error('Erro ao buscar dados', error);
       }
     );
+  }
+
+  delete(id: number):void {
+    this.service.delete(id).subscribe({
+      next: () => this.loadCities(),
+    });
   }
 }

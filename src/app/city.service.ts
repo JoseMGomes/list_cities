@@ -16,5 +16,7 @@ export class CityService {
     return this._httpClient.get<City[]>(this.url);
   }
 
-
+  delete(id: number): Observable<void> {
+    return this._httpClient.delete<void>(`${this.url}/${id}`);
+  }
 }
