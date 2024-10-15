@@ -22,14 +22,20 @@ export class ListCityComponent implements OnInit {
         this.cities = data;
       },
       (error) => {
-        console.error('Erro ao buscar dados', error);
+        console.error('Erro ao buscar cidades', error);
       }
     );
   }
 
-  delete(id: number):void {
+
+  delete(id: number): void {
     this.service.delete(id).subscribe({
-      next: () => this.loadCities(),
+      next: () => {
+        this.loadCities();
+      },
+      error: (err) => {
+        console.error('Erro ao deletar cidade', err);
+      }
     });
   }
 }

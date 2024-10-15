@@ -1,6 +1,6 @@
-<div class="container">
-  <h1>Cadastro de Produto</h1>
-  <form>
+<div *ngIf="FormGroupCity" class="container">
+  <h1>{{ isEditing ? 'Editar Cidade' : 'Cadastrar Cidade' }}</h1>
+  <form [formGroup]="FormGroupCity">
     <div class="mb-3">
       <label for="name" class="form-label">Nome:</label>
       <input
@@ -12,18 +12,17 @@
       />
     </div>
     <div class="mb-3">
-      <label for="price" class="form-label">População:</label>
+      <label for="population" class="form-label">População:</label>
       <input
         formControlName="population"
         type="number"
         class="form-control"
         id="population"
-        placeholder="Digite a População
-        "
+        placeholder="Digite a População"
       />
     </div>
     <div class="mb-3">
-      <label for="category" class="form-label">Estado:</label>
+      <label for="state" class="form-label">Estado:</label>
       <input
         formControlName="state"
         type="text"
@@ -33,17 +32,17 @@
       />
     </div>
     <div class="mb-3">
-      <label for="category" class="form-label">Area</label>
+      <label for="area" class="form-label">Área:</label>
       <input
         formControlName="area"
         type="number"
         class="form-control"
         id="area"
-        placeholder="Digite a area"
+        placeholder="Digite a área"
       />
     </div>
     <div class="mb-3">
-      <label for="category" class="form-label">Ponto famoso:</label>
+      <label for="famous_landmark" class="form-label">Ponto famoso:</label>
       <input
         formControlName="famous_landmark"
         type="text"
@@ -52,7 +51,8 @@
         placeholder="Digite o ponto"
       />
     </div>
-    <button type="button" class="btn btn-primary">Salvar</button>
-    <button type="button" class="btn btn-primary">Criar</button>
+    <button type="button" class="btn btn-primary" (click)="update()">
+      {{ isEditing ? 'Editar' : 'Criar' }}
+    </button>
   </form>
 </div>

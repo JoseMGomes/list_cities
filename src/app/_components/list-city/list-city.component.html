@@ -21,11 +21,15 @@
         <td>{{ city.area }} km²</td>
         <td>{{ city.famous_landmark }}</td>
         <td>
-          <button class="btn btn-primary me-2" routerLink="/form-city">Editar</button>
+          <button class="btn btn-primary me-2" [routerLink]="['/edit-city', city.id]">Editar</button>
           <button class="btn btn-danger" (click)="delete(city.id)">Excluir</button>
         </td>
       </tr>
-      <button class="btn btn-success mt-2" routerLink="/form-city">Adicionar Cidade</button>
+      <tr>
+        <td colspan="7">
+          <button class="btn btn-success mt-2" [routerLink]="['/add-city']">Adicionar Cidade</button>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
